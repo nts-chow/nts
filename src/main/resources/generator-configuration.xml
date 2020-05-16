@@ -7,6 +7,8 @@
     <!-- 属性配置文件 -->
     <properties resource="jdbc.properties"/>
     <classPathEntry location="${jdbc.jar.path}" />
+<!--    建议生成简化版，正常版本有Example程序-->
+<!--    <context id="Mysql" targetRuntime="MyBatis3">-->
     <context id="Mysql" targetRuntime="MyBatis3Simple">
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <commentGenerator>

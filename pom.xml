@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.cn.nts</groupId>
     <artifactId>nts</artifactId>
@@ -55,7 +55,7 @@
             <artifactId>nekohtml</artifactId>
             <version>1.9.22</version>
         </dependency>
-
+        <!--Druid是目前最好的数据库连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
@@ -67,31 +67,28 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-
+        <!--tk.mybatis是在MyBatis框架的基础上提供了很多工具，让开发更加高效-->
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>2.1.5</version>
         </dependency>
-
+        <!--PageHelper是MyBatis的分面插件 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.13</version>
         </dependency>
-
         <dependency>
             <groupId>org.mybatis.dynamic-sql</groupId>
             <artifactId>mybatis-dynamic-sql</artifactId>
             <version>1.1.4</version>
         </dependency>
-
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.4.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -107,6 +104,7 @@
                 <executions>
                     <execution>
                         <id>Generate MyBatis Artifacts</id>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -123,5 +121,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,11 +1,12 @@
 package com.cn.nts.nts13.root;
 
-import org.mybatis.spring.annotation.MapperScan;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import tk.mybatis.spring.annotation.MapperScan;
 
 @MapperScan(basePackages = "com.cn.nts.nts13.root.dao")
 @RestController
@@ -18,5 +19,4 @@ public class Nts13Application {
     public static void main(String[] args) {
         SpringApplication.run(Nts13Application.class, args);
     }
-
 }
