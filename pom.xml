@@ -12,7 +12,7 @@
     <artifactId>nts13</artifactId>
     <version>1.0.0</version>
     <name>nts13</name>
-    <description>AndreHar project for Spring Boot</description>
+    <description>prj for liukaku by andre</description>
 
     <distributionManagement>
         <repository>
