@@ -40,4 +40,14 @@
     select id, name, price, pic, createtime, detail
     from items
   </select>
+  <select id="selectByExample" parameterType="tk.mybatis.mapper.entity.Example" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    from items
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
 </mapper>

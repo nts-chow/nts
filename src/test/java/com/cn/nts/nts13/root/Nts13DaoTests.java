@@ -4,7 +4,6 @@ import com.cn.nts.nts13.root.dao.EmpMapper;
 import com.cn.nts.nts13.root.dao.ItemsMapper;
 import com.cn.nts.nts13.root.entity.Emp;
 import com.cn.nts.nts13.root.entity.Items;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
