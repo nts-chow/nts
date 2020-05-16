@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @SpringBootApplication
 public class Nts13Application {
-    @RequestMapping(value = "",method = RequestMethod.GET)
+    @RequestMapping(value = "test",method = RequestMethod.GET)
     public String sayHey(){
         return "hi Spring Boot!!!";
     }
