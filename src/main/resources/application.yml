@@ -1,4 +1,3 @@
-
 server:
   port: 9090
   servlet:
@@ -6,3 +5,10 @@ server:
 logging:
   file:
     name: logs/server.log
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
