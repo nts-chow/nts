@@ -1,4 +1,4 @@
-package com.cn.nts.nts13.root;
+package com.cn.nts.nts13.root.controller;
 
 
 import org.springframework.stereotype.Controller;
