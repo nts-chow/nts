@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cn.nts.nts13.root.dao.GeneratortestMapper">
+  <resultMap id="BaseResultMap" type="com.cn.nts.nts13.root.entity.Generatortest">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="generatortime" jdbcType="TIMESTAMP" property="generatortime" />
+    <result column="generatorvarchar" jdbcType="VARCHAR" property="generatorvarchar" />
+    <result column="generatordouble" jdbcType="DOUBLE" property="generatordouble" />
+    <result column="generatordatetime" jdbcType="TIMESTAMP" property="generatordatetime" />
+    <result column="generatorjson" jdbcType="LONGVARCHAR" property="generatorjson" />
+  </resultMap>
+  <insert id="insert" parameterType="com.cn.nts.nts13.root.entity.Generatortest">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into generatortest (generatortime, generatorvarchar, 
+      generatordouble, generatordatetime, generatorjson
+      )
+    values (#{generatortime,jdbcType=TIMESTAMP}, #{generatorvarchar,jdbcType=VARCHAR}, 
+      #{generatordouble,jdbcType=DOUBLE}, #{generatordatetime,jdbcType=TIMESTAMP}, #{generatorjson,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, generatortime, generatorvarchar, generatordouble, generatordatetime, generatorjson
+    from generatortest
+  </select>
+</mapper>

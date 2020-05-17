@@ -43,7 +43,7 @@
 <!--        <table schema="maven" tableName="items"  >-->
 <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
 <!--        </table>-->
-        <table schema="maven" tableName="emp"  >
+        <table schema="maven" tableName="generatortest"  >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
