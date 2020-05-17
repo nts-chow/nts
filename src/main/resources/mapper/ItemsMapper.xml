@@ -40,6 +40,45 @@
     select id, name, price, pic, createtime, detail
     from items
   </select>
+  <resultMap id="BaseResultMap" type="com.cn.nts.nts13.root.entity.Items">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="price" jdbcType="REAL" property="price" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from items
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cn.nts.nts13.root.entity.Items">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into items (name, price, pic, 
+      createtime, detail)
+    values (#{name,jdbcType=VARCHAR}, #{price,jdbcType=REAL}, #{pic,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{detail,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.cn.nts.nts13.root.entity.Items">
+    update items
+    set name = #{name,jdbcType=VARCHAR},
+      price = #{price,jdbcType=REAL},
+      pic = #{pic,jdbcType=VARCHAR},
+      createtime = #{createtime,jdbcType=TIMESTAMP},
+      detail = #{detail,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, name, price, pic, createtime, detail
+    from items
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, price, pic, createtime, detail
+    from items
+  </select>
   <select id="selectByExample" parameterType="tk.mybatis.mapper.entity.Example" resultMap="BaseResultMap">
     select
     <if test="distinct">

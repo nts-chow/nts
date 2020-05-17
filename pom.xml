@@ -8,10 +8,10 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>com.cn.nts</groupId>
-    <artifactId>nts</artifactId>
+    <groupId>com.cn.nts13</groupId>
+    <artifactId>nts13</artifactId>
     <version>1.0.0</version>
-    <name>nts</name>
+    <name>nts13</name>
     <description>prj for liukaku by andre</description>
 
     <distributionManagement>
