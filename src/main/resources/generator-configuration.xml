@@ -40,9 +40,9 @@
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- 指定数据库表 -->
-        <table schema="maven" tableName="items"  >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
+<!--        <table schema="maven" tableName="items"  >-->
+<!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+<!--        </table>-->
         <table schema="maven" tableName="emp"  >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>

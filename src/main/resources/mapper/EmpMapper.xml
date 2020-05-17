@@ -20,23 +20,4 @@
     select id, name, msg, info
     from emp
   </select>
-  <resultMap id="BaseResultMap" type="com.cn.nts.nts13.root.entity.Emp">
-    <result column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="msg" jdbcType="VARCHAR" property="msg" />
-    <result column="info" jdbcType="VARCHAR" property="info" />
-  </resultMap>
-  <insert id="insert" parameterType="com.cn.nts.nts13.root.entity.Emp">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into emp (name, msg, info
-      )
-    values (#{name,jdbcType=VARCHAR}, #{msg,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}
-      )
-  </insert>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select id, name, msg, info
-    from emp
-  </select>
 </mapper>
